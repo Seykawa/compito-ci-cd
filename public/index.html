@@ -1,0 +1,32 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Libri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestione Libri</h1>
+    <section>
+        <button onclick="getLibri()">Mostra tutti i libri</button>
+        <div id="libri"></div>
+    </section>
+
+    <!-- Form per aggiungere un nuovo libro -->
+    <section>
+        <h2>Aggiungi un nuovo libro</h2>
+        <form id="libroForm" onsubmit="aggiungiLibro(event)">
+            <input type="text" id="nome" placeholder="Nome del libro" required>
+            <input type="text" id="descrizione" placeholder="Descrizione" required>
+            <input type="number" id="quantita" placeholder="Quantità" required min="0">
+            <input type="number" id="prezzo" placeholder="Prezzo" required min="0" step="0.01">
+            <input type="text" id="autore" placeholder="Autore" required>
+            <button type="submit">Aggiungi Libro</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
